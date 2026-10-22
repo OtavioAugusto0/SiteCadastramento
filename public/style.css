@@ -1,0 +1,74 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Trebuchet MS", sans-serif;
+
+    background: linear-gradient(to bottom, rgb(7, 7, 51), #000);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    font-size: 24px;
+}
+
+.cartao {
+    animation: subirCartao 0.8s ease-out;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 430px;
+}
+
+@keyframes subirCartao {
+    from{
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.campo input:focus,
+.campo select:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.3);
+    border-color: blue;
+    outline: none;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #070733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #202060;
+}
