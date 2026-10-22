@@ -107,4 +107,10 @@ const servidor = app.listen(3000, function() {
 
 servidor.on('error', function(erro) {
     console.error('Erro ao iniciar o servidor:', erro.message);
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+    });
 });
